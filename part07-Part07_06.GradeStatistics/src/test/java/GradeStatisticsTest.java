@@ -17,7 +17,7 @@ public class GradeStatisticsTest {
     public void avgAll1() {
         io.setSysIn(userInput(-42, 24, 42, 72, 80, 52) + "-1\n");
         try {
-            Main.main(new String[0]);
+            tester.main(new String[0]);
         } catch (Throwable t) {
 
         }
@@ -33,7 +33,7 @@ public class GradeStatisticsTest {
     public void avgAll2() {
         io.setSysIn(userInput(50, 51, 52) + "-1\n");
         try {
-            Main.main(new String[0]);
+            tester.main(new String[0]);
         } catch (Throwable t) {
 
         }
@@ -49,7 +49,7 @@ public class GradeStatisticsTest {
     public void avgPassing1() {
         io.setSysIn(userInput(-42, 24, 42, 72, 80, 52) + "-1\n");
         try {
-            Main.main(new String[0]);
+            tester.main(new String[0]);
         } catch (Throwable t) {
 
         }
@@ -65,7 +65,7 @@ public class GradeStatisticsTest {
     public void avgPassing2() {
         io.setSysIn(userInput(69, 70, 71) + "-1\n");
         try {
-            Main.main(new String[0]);
+            tester.main(new String[0]);
         } catch (Throwable t) {
 
         }
@@ -87,7 +87,7 @@ public class GradeStatisticsTest {
                 + "1\n"
                 + "-1\n");
         try {
-            Main.main(new String[0]);
+            tester.main(new String[0]);
         } catch (Throwable t) {
 
         }
@@ -103,7 +103,7 @@ public class GradeStatisticsTest {
     public void passPercentage2() {
         io.setSysIn(userInput(49, 50, 51) + "-1\n");
         try {
-            Main.main(new String[0]);
+            tester.main(new String[0]);
         } catch (Throwable t) {
 
         }
@@ -204,7 +204,7 @@ public class GradeStatisticsTest {
      */
     private void test(int[] numbers, int[] distribution, double percentage) {
         io.setSysIn(userInput(numbers) + "-1\n");
-        Main.main(new String[0]);
+        tester.main(new String[0]);
         String[] rows = io.getSysOut().split("\n");
 
         String percentage2 = ("" + percentage).replace('.', ',');

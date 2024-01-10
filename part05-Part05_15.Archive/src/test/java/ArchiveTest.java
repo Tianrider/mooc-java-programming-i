@@ -53,7 +53,7 @@ public class ArchiveTest {
         io.setSysIn(input);
 
         try {
-            Main.main(new String[]{});
+            tester.main(new String[]{});
         } catch (Throwable t) {
             fail("Executing the program failed.");
         }

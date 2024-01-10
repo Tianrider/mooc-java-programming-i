@@ -46,7 +46,7 @@ public class BooksTest {
         io.setSysIn(input);
 
         try {
-            Main.main(new String[]{});
+            tester.main(new String[]{});
         } catch (Throwable t) {
             fail("Failed to execute the program.");
         }

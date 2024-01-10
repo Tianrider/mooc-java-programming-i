@@ -44,11 +44,34 @@ public class Searching {
     }
 
     public static int linearSearch(ArrayList<Book> books, int searchedId) {
-        return -1;
+        int index = -1;
+        for (int i = 0; i < books.size(); i++) {
+            Book book = books.get(i);
+            if(book.getId() == searchedId) {
+                index = i;
+            }
+        }
+        return index;
     }
 
     public static int binarySearch(ArrayList<Book> books, long searchedId) {
+        int begin = 0;
+        int end = books.size() - 1;
+        
+        while(begin <= end){
+            int middle = (begin + end) / 2;
+            
+            int currentBookId = books.get(middle).getId();
+            if( currentBookId == searchedId){
+                return middle;
+            }
+            if(currentBookId < searchedId){
+                begin = middle + 1;
+            }
+            if (currentBookId > searchedId){
+                end = middle - 1;
+            }
+        }
         return -1;
     }
 }
-
